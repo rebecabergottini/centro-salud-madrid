@@ -1,0 +1,296 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #eff8fb;
+}
+
+.contenedor {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #3eb3e5;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Navegación */
+nav {
+    overflow-x: auto; /* Permite scroll horizontal en móviles */
+    padding-bottom: 5px; /* Espacio para scroll */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-top: 15px;
+    gap: 10px; /* Espacio entre items */
+    flex-wrap: nowrap;
+}
+
+nav ul li {
+    white-space: nowrap; /* Evita saltos de línea */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+nav ul li a:hover, 
+nav ul li.activo a {
+    background-color: #69b5e8;
+}
+
+/* Efecto visual para scroll en móviles */
+nav::-webkit-scrollbar {
+    height: 5px;
+}
+
+nav::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 5px;
+}
+
+/* Hero section */
+.hero {
+    background-color: #8bc5e9;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.ahdubai.com/img/doctor/banner.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    margin-bottom: 30px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta h2, .tarjeta h3 {
+    color: #3eb3e5;
+    margin-top: 0;
+}
+
+.icono-grande {
+    font-size: 2.5rem;
+    color: #3eb3e5;
+    margin-bottom: 15px;
+}
+
+/* Programas/Valores */
+.programas {
+    margin: 50px 0;
+}
+
+.titulo-seccion {
+    color: #3eb3e5;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #8bc5e9;
+}
+
+.programas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Requisitos/Equipo */
+.requisitos {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 50px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.requisitos h2 {
+    color: #3eb3e5;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.paso {
+    text-align: center;
+    padding: 20px;
+    background-color: #eff8fb;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.paso:hover {
+    transform: translateY(-5px);
+}
+
+.numero {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #3eb3e5;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+
+.texto-centrado {
+    text-align: center;
+}
+
+/* Botones */
+.boton {
+    display: inline-block;
+    background-color: #3eb3e5;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #2a9bd4;
+}
+
+/* Pie de página */
+
+footer {
+    background-color: #3eb3e5;
+    color: white;
+    padding: 40px 0 0;
+}
+
+footer .contenedor {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.info-contacto h3, .horario h3 {
+    border-bottom: 1px solid #69b5e8;
+    padding-bottom: 10px;
+}
+
+.horario p {
+    margin: 5px 0;
+}
+
+.derechos {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #2a9bd4;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 95%;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    .menu-movil {
+        display: block;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .programas-grid, .pasos {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        padding: 30px 15px;
+    }
+}

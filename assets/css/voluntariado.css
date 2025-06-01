@@ -1,0 +1,319 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #eff8fb;
+}
+
+.contenedor {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #3eb3e5;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Navegación */
+nav {
+    overflow-x: auto; /* Permite scroll horizontal en móviles */
+    padding-bottom: 5px; /* Espacio para scroll */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-top: 15px;
+    gap: 10px; /* Espacio entre items */
+    flex-wrap: nowrap;
+}
+
+nav ul li {
+    white-space: nowrap; /* Evita saltos de línea */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+nav ul li a:hover, 
+nav ul li.activo a {
+    background-color: #69b5e8;
+}
+
+/* Efecto visual para scroll en móviles */
+nav::-webkit-scrollbar {
+    height: 5px;
+}
+
+nav::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 5px;
+}
+
+/* Hero section */
+.hero {
+    background-color: #8bc5e9;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://th.bing.com/th/id/OIP.9FiPhf2yoDn9jVQ0p_VbLAHaDY?cb=iwp2&w=1920&h=876&rs=1&pid=ImgDetMain');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Cómo involucrarse */
+.como-involucrarse {
+    margin: 50px 0;
+}
+
+.titulo-seccion {
+    color: #3eb3e5;
+    border-bottom: 2px solid #b2e1f5;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.pasos-voluntariado {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.paso {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.paso:hover {
+    transform: translateY(-5px);
+}
+
+.paso-numero {
+    width: 40px;
+    height: 40px;
+    background-color: #3eb3e5;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.paso h3 {
+    color: #3eb3e5;
+    margin-top: 0;
+}
+
+.boton-centrado {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.boton-grande {
+    display: inline-block;
+    background-color: #3eb3e5;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.boton-grande:hover {
+    background-color: #2a9bd4;
+}
+
+/* Proyectos */
+.proyectos {
+    margin: 50px 0;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.proyecto {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+}
+
+.icono-grande {
+    font-size: 3rem;
+    color: #3eb3e5;
+    margin-bottom: 20px;
+}
+
+.proyecto h3 {
+    color: #3eb3e5;
+    margin-top: 0;
+}
+
+.proyecto ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.proyecto li {
+    margin-bottom: 8px;
+}
+
+/* Beneficios y requisitos */
+.beneficios-requisitos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 50px 0;
+}
+
+.beneficios, .requisitos {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.lista-beneficios, .lista-requisitos {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-beneficios li, .lista-requisitos li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-beneficios i {
+    color: #3eb3e5;
+    font-size: 1.2rem;
+}
+
+.lista-requisitos i {
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+/* Pie de página */
+
+footer {
+    background-color: #3eb3e5;
+    color: white;
+    padding: 40px 0 0;
+}
+
+footer .contenedor {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.info-contacto h3, .horario h3 {
+    border-bottom: 1px solid #69b5e8;
+    padding-bottom: 10px;
+}
+
+.horario p {
+    margin: 5px 0;
+}
+
+.derechos {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #2a9bd4;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 95%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
+    
+    .beneficios-requisitos {
+        grid-template-columns: 1fr;
+    }
+    
+    footer .contenedor {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .pasos-voluntariado {
+        grid-template-columns: 1fr;
+    }
+    
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Voluntariado | Centro de Salud Madrid</title>
+    <link rel="stylesheet" href="../assets/css/formulario-voluntariado.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Centro de Salud Madrid</h1>
+            
+        </header>
+
+        <main>
+            <h2>Formulario de Inscripción para Voluntarios</h2>
+            <p class="subtitle">Completa tus datos y únete a nuestro equipo</p>
+
+            <form id="volunteerForm">
+                <!-- Sección Datos Personales -->
+                <section class="form-section">
+                    <h3>Datos Personales</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Nombre completo*</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono*</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthdate">Fecha de nacimiento*</label>
+                            <input type="date" id="birthdate" name="birthdate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Dirección</label>
+                            <input type="text" id="address" name="address">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Áreas de Interés -->
+                <section class="form-section">
+                    <h3>Áreas de Interés</h3>
+                    <p>Selecciona las áreas en las que te gustaría participar (puedes elegir varias):</p>
+                    
+                    <div class="interests-grid">
+                        <div class="interest-option">
+                            <input type="checkbox" id="acompanamiento" name="interests" value="acompanamiento">
+                            <label for="acompanamiento">Acompañamiento a pacientes</label>
+                        </div>
+                        <div class="interest-option">
+                            <input type="checkbox" id="talleres" name="interests" value="talleres" checked>
+                            <label for="talleres">Talleres comunitarios</label>
+                        </div>
+                        <div class="interest-option">
+                            <input type="checkbox" id="administrativo" name="interests" value="administrativo">
+                            <label for="administrativo">Apoyo administrativo</label>
+                        </div>
+                        <div class="interest-option">
+                            <input type="checkbox" id="eventos" name="interests" value="eventos" checked>
+                            <label for="eventos">Organización de eventos</label>
+                        </div>
+                        <div class="interest-option">
+                            <input type="checkbox" id="traduccion" name="interests" value="traduccion" checked>
+                            <label for="traduccion">Traducción/intérprete</label>
+                        </div>
+                        <div class="interest-option">
+                            <input type="checkbox" id="otro" name="interests" value="otro">
+                            <label for="otro">Otro (especificar abajo)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group other-interest">
+                        <label for="otherInterest">Otra área de interés</label>
+                        <input type="text" id="otherInterest" name="otherInterest">
+                    </div>
+                </section>
+
+                <!-- Sección Disponibilidad -->
+                <section class="form-section">
+                    <h3>Disponibilidad</h3>
+                    <div class="availability-section">
+                        <div class="form-group">
+                            <label>Días disponibles*</label>
+                            <div class="days-grid">
+                                <div class="day-option">
+                                    <input type="checkbox" id="lunes" name="days" value="lunes">
+                                    <label for="lunes">Lunes</label>
+                                </div>
+                                <div class="day-option">
+                                    <input type="checkbox" id="martes" name="days" value="martes">
+                                    <label for="martes">Martes</label>
+                                </div>
+                                <div class="day-option">
+                                    <input type="checkbox" id="miercoles" name="days" value="miercoles">
+                                    <label for="miercoles">Miércoles</label>
+                                </div>
+                                <div class="day-option">
+                                    <input type="checkbox" id="jueves" name="days" value="jueves">
+                                    <label for="jueves">Jueves</label>
+                                </div>
+                                <div class="day-option">
+                                    <input type="checkbox" id="viernes" name="days" value="viernes">
+                                    <label for="viernes">Viernes</label>
+                                </div>
+                                <div class="day-option">
+                                    <input type="checkbox" id="sabado" name="days" value="sabado">
+                                    <label for="sabado">Sábado</label>
+                                </div>
+                                <div class="day-option">
+                                    <input type="checkbox" id="domingo" name="days" value="domingo">
+                                    <label for="domingo">Domingo</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="schedule">Horario preferido*</label>
+                            <select id="schedule" name="schedule" required>
+                                <option value="">Selecciona...</option>
+                                <option value="manana">Mañana (9:00 - 13:00)</option>
+                                <option value="tarde">Tarde (15:00 - 19:00)</option>
+                                <option value="fin_semana">Fin de semana</option>
+                                <option value="flexible">Horario flexible</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hours">Horas disponibles por semana*</label>
+                            <input type="number" id="hours" name="hours" min="1" required>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Enviar Solicitud</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="../assets/js/formulario-voluntariado.js"></script>
+</body>
+</html>

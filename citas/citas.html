@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Citas | Centro de Salud Madrid</title>
+    <link rel="stylesheet" href="..\assets\css\citas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <h1>Centro de Salud Madrid</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pages/servicios.html">Servicios</a></li>
+                    <li><a href="../pages/programas-salud-publica.html">Programas de Salud</a></li>
+                    <li><a href="../citas/citas.html">Citas</a></li>
+                    <li><a href="../info/ubicacion.html">Ubicación</a></li>
+                    <li><a href="../pages/noticias/noticias.html">Noticias</a></li>
+                    <li><a href="../pages/faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="../info/sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="../pages/voluntariado.html">Voluntariado</a></li>
+                    <li><a href="../info/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-citas">
+            <div class="contenedor">
+                <h2>Agenda tu cita médica</h2>
+                <p>Solicita tu consulta de manera rápida y sencilla</p>
+            </div>
+        </section>
+
+        <section class="metodos-cita">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Métodos para agendar citas</h2>
+                <div class="metodos-grid">
+                    <div class="metodo-card">
+                        <i class="fas fa-laptop-medical"></i>
+                        <h3>Online</h3>
+                        <p>Agenda tu cita a través de nuestro sistema web disponible 24/7</p>
+                        <button id="btnOnline" class="boton">Agendar online</button>
+                    </div>
+                    <div class="metodo-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Teléfono</h3>
+                        <p>Llámanos al <strong>915 123 456</strong> de lunes a viernes de 8:00 a 20:00</p>
+                        <a href="tel:915123456" class="boton-secundario">Llamar ahora</a>
+                    </div>
+                    <div class="metodo-card">
+                        <i class="fas fa-hospital-user"></i>
+                        <h3>Presencial</h3>
+                        <p>Visita nuestra recepción en horario de atención al público</p>
+                        <a href="ubicacion.html" class="boton-secundario">Ver ubicación</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formularioCita" class="formulario-cita" style="display: none;">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Formulario de cita online</h2>
+                <form id="citaForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="tipoDocumento">Tipo de documento*</label>
+                            <select id="tipoDocumento" name="tipoDocumento" required>
+                                <option value="">Seleccione...</option>
+                                <option value="dni">DNI</option>
+                                <option value="nie">NIE</option>
+                                <option value="pasaporte">Pasaporte</option>
+                                <option value="tarjeta-sanitaria">Tarjeta sanitaria</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="numeroDocumento">Número de documento*</label>
+                            <input type="text" id="numeroDocumento" name="numeroDocumento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo*</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono*</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipoCita">Tipo de cita*</label>
+                            <select id="tipoCita" name="tipoCita" required>
+                                <option value="">Seleccione...</option>
+                                <option value="consulta-general">Consulta general</option>
+                                <option value="pediatria">Pediatría</option>
+                                <option value="ginecologia">Ginecología</option>
+                                <option value="odontologia">Odontología</option>
+                                <option value="examenes">Exámenes médicos</option>
+                                <option value="grupo">Consulta en grupo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha">Fecha preferida*</label>
+                            <input type="date" id="fecha" name="fecha" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hora">Hora preferida*</label>
+                            <select id="hora" name="hora" required>
+                                <option value="">Seleccione...</option>
+                                <option value="08:00">08:00 AM</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">01:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                                <option value="17:00">05:00 PM</option>
+                                <option value="18:00">06:00 PM</option>
+                                <option value="19:00">07:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="motivo">Motivo de la consulta (opcional)</label>
+                            <textarea id="motivo" name="motivo" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="boton">Solicitar cita</button>
+                        <button type="reset" class="boton-secundario">Limpiar formulario</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="info-adicional">
+            <div class="contenedor">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="far fa-clock"></i> Horarios de atención</h3>
+                        <div class="horarios">
+                            <div class="horario-item">
+                                <h4>Medicina General</h4>
+                                <p>Lunes a Viernes: 8:00 - 20:00</p>
+                                <p>Sábados: 9:00 - 14:00</p>
+                            </div>
+                            <div class="horario-item">
+                                <h4>Pediatría</h4>
+                                <p>Lunes a Viernes: 9:00 - 19:00</p>
+                            </div>
+                            <div class="horario-item">
+                                <h4>Ginecología</h4>
+                                <p>Lunes, Miércoles, Viernes: 10:00 - 18:00</p>
+                            </div>
+                            <div class="horario-item">
+                                <h4>Odontología</h4>
+                                <p>Lunes a Viernes: 9:00 - 17:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-times"></i> Políticas de cancelación</h3>
+                        <ul class="politicas">
+                            <li>Cancelaciones con menos de 24 horas de anticipación pueden generar cargos</li>
+                            <li>3 faltas sin aviso pueden suspender tu derecho a agendar citas online</li>
+                            <li>Para reprogramar, hazlo con al menos 2 horas de anticipación</li>
+                            <li>Exámenes médicos requieren 48 horas para cancelación sin cargo</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-vial"></i> Exámenes médicos</h3>
+                        <p>Proceso para agendar exámenes:</p>
+                        <ol class="examenes-list">
+                            <li>Solicitar orden médica</li>
+                            <li>Agendar cita para examen</li>
+                            <li>Preparación según tipo de examen</li>
+                            <li>Asistir en ayunas si corresponde</li>
+                            <li>Retirar resultados según indicaciones</li>
+                        </ol>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="confirmacionCita" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>¡Cita agendada con éxito!</h3>
+                    <p id="mensajeConfirmacion"></p>
+                    <div class="modal-actions">
+                        <button id="btnImprimir" class="boton-pequeno"><i class="fas fa-print"></i> Imprimir comprobante</button>
+                        <button id="btnNuevaCita" class="boton-pequeno"><i class="fas fa-calendar-plus"></i> Agendar otra cita</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <div class="info-contacto">
+                <h3>Centro de Salud Madrid</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle de la Salud, 28013 Madrid</p>
+                <p><i class="fas fa-phone"></i> 915 123 456</p>
+                <p><i class="fas fa-envelope"></i> saludmadrid@centrosaludmadrid.es</p>
+            </div>
+            <div class="horario">
+                <h3>Horario de Atención</h3>
+                <p>Lunes a Viernes: 06:30 - 14:00 y 15:30 - 19:30</p>
+                <p>Sábados: 9:00 - 13:00 (solo urgencias)</p>
+                <p>Consultas previa cita</p>
+            </div>
+        </div>
+        <div class="derechos">
+            <p>&copy; 2025 Centro de Salud Madrid. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="citas.js"></script>
+</body>
+</html>

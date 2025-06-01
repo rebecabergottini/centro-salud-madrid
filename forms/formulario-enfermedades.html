@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción a Talleres | Centro de Salud Madrid</title>
+    <link rel="stylesheet" href="../assets/css/formulario-enfermedades.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <main class="contenedor">
+        <section class="hero-talleres">
+            <h1>Inscripción a Talleres</h1>
+            <p>Mejora tu calidad de vida participando en nuestros talleres educativos</p>
+        </section>
+
+        <form id="formularioTaller" class="formulario-taller">
+            <div class="seccion-formulario">
+                <h2><i class="fas fa-user-edit"></i> Datos Personales</h2>
+                <div class="campos-formulario">
+                    <div class="campo">
+                        <label for="nombre">Nombre completo*</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono*</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="campo">
+                        <label for="fecha-nacimiento">Fecha de nacimiento*</label>
+                        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                    </div>
+                    <div class="campo">
+                        <label for="historial">Número de historial médico (si aplica)</label>
+                        <input type="text" id="historial" name="historial">
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-formulario">
+                <h2><i class="fas fa-clipboard-list"></i> Selección de Taller</h2>
+                <div class="campo">
+                    <label for="taller">Taller de interés*</label>
+                    <select id="taller" name="taller" required>
+                        <option value="">Selecciona un taller...</option>
+                        <option value="nutricion-diabeticos">Nutrición para diabéticos</option>
+                        <option value="cocina-cardiosaludable">Cocina cardiosaludable</option>
+                        <option value="manejo-hipertension">Manejo de la hipertensión</option>
+                        <option value="ejercicio-cronico">Ejercicio para enfermedades crónicas</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="fecha">Fecha preferida*</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div class="campo">
+                    <label>¿Asistirá acompañado?</label>
+                    <div class="opciones-radio">
+                        <label>
+                            <input type="radio" name="acompanado" value="si"> Sí
+                        </label>
+                        <label>
+                            <input type="radio" name="acompanado" value="no" checked> No
+                        </label>
+                    </div>
+                </div>
+                <div class="campo acompanante-info" style="display: none;">
+                    <label for="nombre-acompanante">Nombre del acompañante</label>
+                    <input type="text" id="nombre-acompanante" name="nombre-acompanante">
+                </div>
+            </div>
+
+            <div class="seccion-formulario">
+                <h2><i class="fas fa-heartbeat"></i> Información de Salud</h2>
+                <div class="campo">
+                    <label for="condicion">Condición médica principal*</label>
+                    <select id="condicion" name="condicion" required>
+                        <option value="">Selecciona...</option>
+                        <option value="diabetes">Diabetes</option>
+                        <option value="hipertension">Hipertensión</option>
+                        <option value="cardiopatia">Cardiopatía</option>
+                        <option value="otra">Otra condición crónica</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="medicamentos">Medicamentos actuales (lista breve)</label>
+                    <textarea id="medicamentos" name="medicamentos" rows="3"></textarea>
+                </div>
+                <div class="campo">
+                    <label for="observaciones">Observaciones o necesidades especiales</label>
+                    <textarea id="observaciones" name="observaciones" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="seccion-formulario">
+                <h2><i class="fas fa-check-circle"></i> Confirmación</h2>
+                <div class="campo-terminos">
+                    <label>
+                        <input type="checkbox" name="terminos" required>
+                        Acepto los <a href="../info/politica.html">términos y condiciones</a> de participación*
+                    </label>
+                </div>
+                <div class="campo-terminos">
+                    <label>
+                        <input type="checkbox" name="privacidad" required>
+                        Autorizo el tratamiento de mis datos según la <a href="../info/politica.html">política de privacidad</a>*
+                    </label>
+                </div>
+                <div class="campo-terminos">
+                    <label>
+                        <input type="checkbox" name="newsletter">
+                        Deseo recibir información sobre próximos talleres y actividades
+                    </label>
+                </div>
+            </div>
+
+            <div class="acciones-formulario">
+                <button type="submit" class="boton-enviar">Enviar Inscripción</button>
+                <button type="reset" class="boton-limpiar">Limpiar Formulario</button>
+            </div>
+        </form>
+
+        <div id="mensaje-exito" class="mensaje-exito" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <h3>¡Inscripción enviada con éxito!</h3>
+            <p>Recibirás un correo de confirmación en las próximas 24 horas.</p>
+            <a href="../pages/enfermedades.html" class="boton-volver">Volver a talleres</a>
+        </div>
+    </main>
+
+
+
+    <script src="../assets/js/formulario-enfermedades.js"></script>
+</body>
+</html>
