@@ -24,3 +24,7 @@ La web ofrece funcionalidades básicas como:
    ```bash
    git clone https://github.com/rebecabergottini/centro-salud-madrid.git
 Abre index.html en tu navegador.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia Apache 2.0 - consulta el archivo [LICENSE](LICENSE) para más detalles.
